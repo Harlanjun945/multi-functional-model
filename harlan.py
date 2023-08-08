@@ -261,7 +261,7 @@ def plot2D(ax, x, y, color, xlim, ylim, plot_label,
 def plot3D(ax, x, y, z, xlabel, ylabel, cblabel, vmin, vmax,
            xtick_keys, ytick_keys, cbtick_keys,
            xtick_values=None, ytick_values=None,
-           save='True', cmap='jet', visual_value=[]):
+           save='False', cmap='jet', visual_value=[]):
     x = np.arange(len(x))
     y = np.arange(len(y))[::-1]
     linewidth = 0.5  # 坐标轴线宽
@@ -300,6 +300,8 @@ def plot3D(ax, x, y, z, xlabel, ylabel, cblabel, vmin, vmax,
         plt.savefig('out.svg', format='svg')
     plt.show()
 # --------------------------------------正文区-------------------------------------------
+
+
 def func(para):  # 工作函数
     y = np.sin(para['theta'])
     return y
